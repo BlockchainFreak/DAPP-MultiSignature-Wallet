@@ -1,0 +1,252 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: rgb(18, 21,38);
+  color:rgb(226, 235, 251);
+}
+
+.split {
+  display: flex;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  position: absolute;
+  left: 1vmax;
+  top: 2vmax;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainbar{
+  position: absolute;
+  right: 1vw;
+  top: 1vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.Header {
+  height: 80px;
+  width: 40vw;
+  background: rgb(25,30,45);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.msw {
+  align-items: center;
+  color: white;
+  font-family: sans-serif;
+  font-size: 2vw;
+  margin: auto;
+}
+
+.newTransactionForm {
+  background-color: rgb(35, 45, 65);
+  border: none;
+  border-radius: 30px;
+  width: 40vw;
+  padding: 10px 25px;
+  margin-top: 10px;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.tx-new-input {
+  border-radius: 20px;
+  border: transparent 1px solid;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(45, 60, 85);
+  padding: 10px;
+  color: rgb(238, 239, 240);
+  font-size: 16px;
+  margin: 10px 0;
+}
+.tx-new-input:hover{ border: #ddd 1px solid; }
+
+.newTransactionForm > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tx-submit-input {
+  margin: 5px 10px;
+  color: rgb(80, 92, 120);
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+}
+
+.tx-submit-input:focus {
+  color: white;
+  outline: none;
+}
+
+.submit-btn {
+  border-radius: 20px;
+  background-color: rgb(65,150,205);
+  border: none;
+  color: white;
+  padding: 10px 40px;
+  font-size: 16px;
+  margin: 5px auto;
+}
+.submit-btn:hover{background-color: rgb(85,175,225);}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #282D35;
+  border-radius: 20px;
+  border: rgb(30, 139, 176) 2px solid;
+  width: 50%;
+  min-width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 10px;
+}
+
+.popup > h2 {
+  text-align: center;
+  color: white;
+}
+
+.popup > ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.popup > li {
+  margin: 10px;
+}
+
+.address-btn{
+  padding: 10px 20px;
+  margin: 8px;
+  background: rgb(25,30,45);
+  border: 1px transparent solid;
+  border-radius: 10px/20px;
+  color: whitesmoke;
+  font-size: 16px;
+}
+.address-btn:hover{
+  border: white 1px solid;
+}
+
+.close-portal-btn {
+  padding: 5px 20px;
+  background-color: #282D35;
+  border: 1px transparent solid;
+  border-radius: 5px/10px;
+  color:rgb(238, 239, 240);
+  font-size: 18px;
+  font-weight: bold;
+}
+.close-portal-btn:hover {
+  /* border: rgb(25,30,45) 1px solid; */
+  color: rgb(65, 150, 200);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0,0,0,0.7);
+  z-index: 1000;
+}
+
+.tx-display-box {
+  max-width: 55vw;
+  padding: 0 1vw; 
+  right: 1vw;
+  max-height: 60vh;
+  overflow-y:auto;
+}
+
+.tx-display-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+th td {
+  padding: 5px 20px;
+}
+
+th {
+  background: rgb(25,30,45);
+  padding: 10px;
+  text-align: left;
+}
+
+th:first-child {
+  border-top-left-radius: 10px;
+}
+th:last-child {
+  border-top-right-radius: 10px;
+}
+
+td {
+  padding: 10px 5px;
+  text-align: center;
+  background-color: rgb(35, 45, 65);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.approve-btn {
+  background-color: #21222A;
+  color: white;
+  padding: 5px 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+}
+.approve-btn:hover{
+  background-color: rgb(80, 92, 120);
+}
+
+
+.message-section {
+  margin-top: 2vh;
+  border-radius: 20px;
+}
+
+.msg-head{
+  background: rgb(25,30,45);
+  margin: 0;
+  padding: 10px 30px;
+  border-radius: 20px 20px 0 0;
+}
+
+.msg-body {
+  background-color: rgb(35, 45, 65);
+  max-width: 53vw;
+  border-radius: 20px;
+  padding-bottom: 20px;
+  overflow-y: auto;
+  min-height: 25vh;
+  font-size: 14px;
+}
+
+.message-section ul {
+  list-style-type: none;
+  padding: 0 20px;
+}
